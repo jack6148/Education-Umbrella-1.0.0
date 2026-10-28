@@ -29,6 +29,10 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/user.js"></script>
+    <link href="css/user.css" rel="stylesheet">
 </head>
 
 <body>
@@ -52,14 +56,42 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="universities.html" class="nav-item nav-link">Universities</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <a href="additional.html" class="nav-item nav-link">Additional-Services</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+        
+                <a href="index.html" class="nav-item nav-link active">
+                    <span class="en">Home</span>
+                    <span class="bn">হোম</span>
+                </a>
+        
+                <a href="about.html" class="nav-item nav-link">
+                    <span class="en">About</span>
+                    <span class="bn">আমাদের সম্পর্কে</span>
+                </a>
+        
+                <a href="universities.html" class="nav-item nav-link">
+                    <span class="en">Universities</span>
+                    <span class="bn">বিশ্ববিদ্যালয়সমূহ</span>
+                </a>
+        
+                <a href="courses.html" class="nav-item nav-link">
+                    <span class="en">Courses</span>
+                    <span class="bn">কোর্সসমূহ</span>
+                </a>
+        
+                <a href="additional.html" class="nav-item nav-link">
+                    <span class="en">Additional-Services</span>
+                    <span class="bn">অতিরিক্ত সেবা</span>
+                </a>
+        
+                <a href="contact.html" class="nav-item nav-link">
+                    <span class="en">Contact</span>
+                    <span class="bn">যোগাযোগ</span>
+                </a>
+        
             </div>
-            <a class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">☻</a>
+        
+            <!-- Language switch buttons -->
+            <a id="btnBangla" class="btn btn-primary py-4 px-lg-5">বাং</a>
+            <a id="btnEnglish" class="btn btn-primary py-4 px-lg-5">EN</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -68,75 +100,91 @@
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
+    
+            <!-- Carousel 1 -->
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <!-- <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Expert Guidance for Your Global Future</h5> -->
-                                <h1 class="display-3 text-white animated slideInDown">Your Path to World-Class Education</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Explore top universities, expert guidance, and seamless support to achieve your study abroad dreams. With EduUmbrella, your success knows no borders!</p>
-                                <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a> -->
-                                <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <!-- <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Expert Guidance for Your Global Future</h5> -->
-                                <h1 class="display-3 text-white animated slideInDown">Simplifying International Admissions</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">From selecting the right university to securing your visa, we’re here every step of the way. Start your global journey with EduUmbrella today!</p>
-                                <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a> -->
-                                <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-3.jpg" alt="">
-                
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" 
+                <img class="img-fluid" src="img/carousel-1.png" alt="">
+    
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                      style="background: rgba(24, 29, 56, .7);">
-                    
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                
-                                <!-- <h5 class="text-primary text-uppercase mb-3 animated slideInDown">
-                                    Expert Guidance for Your Global Future
-                                </h5> -->
-                                
+    
                                 <h1 class="display-3 text-white animated slideInDown">
-                                    Personalized Admission Support
+                                    <span class="en">Your Path to World-Class Education</span>
+                                    <span class="bn">বিশ্বমানের শিক্ষার পথে আপনার যাত্রা</span>
                                 </h1>
-                                
+    
                                 <p class="fs-5 text-white mb-4 pb-2">
-                                    Submit your CV, and let us find the perfect university match for you. 
-                                    Your dreams, our expertise!
+                                    <span class="en">Explore top universities, expert guidance, and seamless support to achieve your study abroad dreams. With Education Umbrella, your success knows no borders!</span>
+                                    <span class="bn">বিদেশে পড়াশোনার স্বপ্ন পূরণে সেরা বিশ্ববিদ্যালয়, বিশেষজ্ঞ পরামর্শ এবং নির্ভরযোগ্য সহায়তা পান। Education Umbrella-এর সঙ্গে আপনার সাফল্যের কোনো সীমা নেই!</span>
                                 </p>
-                                
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Carousel 2 -->
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-2.png" alt="">
+    
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                     style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+    
+                                <h1 class="display-3 text-white animated slideInDown">
+                                    <span class="en">Simplifying International Admissions</span>
+                                    <span class="bn">আন্তর্জাতিক বিশ্ববিদ্যালয়ে ভর্তি এখন আরও সহজ</span>
+                                </h1>
+    
+                                <p class="fs-5 text-white mb-4 pb-2">
+                                    <span class="en">From selecting the right university to securing your visa, we’re here every step of the way. Start your global journey with Education Umbrella today!</span>
+                                    <span class="bn">সঠিক বিশ্ববিদ্যালয় নির্বাচন থেকে শুরু করে ভিসা প্রাপ্তি পর্যন্ত প্রতিটি ধাপে আমরা আপনার পাশে আছি। আজই Education Umbrella-এর সঙ্গে আপনার আন্তর্জাতিক শিক্ষাযাত্রা শুরু করুন!</span>
+                                </p>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Carousel 3 -->
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-3.png" alt="">
+    
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                     style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+    
+                                <h1 class="display-3 text-white animated slideInDown">
+                                    <span class="en">Personalized Admission Support</span>
+                                    <span class="bn">আপনার জন্য বিশেষায়িত ভর্তি সহায়তা</span>
+                                </h1>
+    
+                                <p class="fs-5 text-white mb-4 pb-2">
+                                    <span class="en">Submit your CV, and let us find the perfect university match for you. Your dreams, our expertise!</span>
+                                    <span class="bn">আপনার সিভি জমা দিন, আর আপনার যোগ্যতা ও পছন্দ অনুযায়ী উপযুক্ত বিশ্ববিদ্যালয় খুঁজে দেওয়ার দায়িত্ব আমাদের। আপনার স্বপ্ন, আমাদের দক্ষতা!</span>
+                                </p>
+    
                                 <a href="mailto:info@educationumbrella.pt?subject=CV%20Submission%20-%20University%20Admission"
                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
-                                    Submit Your CV
+                                    <span class="en">Submit Your CV</span>
+                                    <span class="bn">আপনার সিভি জমা দিন</span>
                                 </a>
-                                
-                                <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">
-                                    Join Now
-                                </a> -->
-                                
+    
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+    
         </div>
     </div>
     <!-- Carousel End -->
@@ -145,48 +193,93 @@
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
+    
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3 mb-5">Our Services</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3 mb-5">
+                    <span class="en">Our Services</span>
+                    <span class="bn">আমাদের সেবাসমূহ</span>
+                </h6>
                 <!-- <h1 class="mb-5">Helping you every step of the way for a seamless study abroad experience</h1> -->
             </div>
-
+    
             <div class="row g-4">
+    
+                <!-- University Selection -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">University Selection</h5>
-                            <p>Help choose suitable programs and universities</p>
+    
+                            <h5 class="mb-3">
+                                <span class="en">University Selection</span>
+                                <span class="bn">বিশ্ববিদ্যালয় নির্বাচন</span>
+                            </h5>
+    
+                            <p>
+                                <span class="en">Help choose suitable programs and universities</span>
+                                <span class="bn">উপযুক্ত শিক্ষাক্রম ও বিশ্ববিদ্যালয় নির্বাচনে সহায়তা</span>
+                            </p>
                         </div>
                     </div>
                 </div>
+    
+                <!-- Application Support -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Application Support</h5>
-                            <p>Assist with forms, essays, and document submission</p>
+    
+                            <h5 class="mb-3">
+                                <span class="en">Application Support</span>
+                                <span class="bn">আবেদন প্রক্রিয়ায় সহায়তা</span>
+                            </h5>
+    
+                            <p>
+                                <span class="en">Assist with forms, essays, and document submission</span>
+                                <span class="bn">আবেদনপত্র পূরণ, প্রয়োজনীয় লেখা ও কাগজপত্র জমা দিতে সহায়তা</span>
+                            </p>
                         </div>
                     </div>
                 </div>
+    
+                <!-- Visa Assistance -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5 class="mb-3">Visa Assistance</h5>
-                            <p>Guide through the visa application process</p>
+    
+                            <h5 class="mb-3">
+                                <span class="en">Visa Assistance</span>
+                                <span class="bn">ভিসা সংক্রান্ত সহায়তা</span>
+                            </h5>
+    
+                            <p>
+                                <span class="en">Guide through the visa application process</span>
+                                <span class="bn">ভিসার আবেদন প্রক্রিয়ায় প্রয়োজনীয় দিকনির্দেশনা</span>
+                            </p>
                         </div>
                     </div>
                 </div>
+    
+                <!-- Pre/Post-Arrival Support -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Pre/Post-Arrival Support</h5>
-                            <p>Aid with accommodation, cultural tips, and settling in</p>
+    
+                            <h5 class="mb-3">
+                                <span class="en">Pre/Post-Arrival Support</span>
+                                <span class="bn">আগমনের আগে ও পরে সহায়তা</span>
+                            </h5>
+    
+                            <p>
+                                <span class="en">Aid with accommodation, cultural tips, and settling in</span>
+                                <span class="bn">আবাসন, স্থানীয় সংস্কৃতি সম্পর্কে পরামর্শ ও নতুন পরিবেশে মানিয়ে নিতে সহায়তা</span>
+                            </p>
                         </div>
                     </div>
                 </div>
+    
             </div>
         </div>
     </div>
@@ -199,36 +292,90 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/about.png" alt="" style="object-fit: cover;">
                     </div>
                 </div>
+    
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to Education Umbrella</h1>
-                    <p style="text-align: justify;" class="mb-4">At Education Umbrella, we specialize in connecting students with world-class educational opportunities across the globe. Our mission is to simplify the complex process of university admissions by providing personalized guidance, expert support, and comprehensive services.</p>
-                    <p style="text-align: justify;" class="mb-4">With a dedicated team of professionals, we assist students in selecting the best universities, preparing applications, securing visas, and transitioning smoothly to their new academic environment. We are committed to helping students achieve their dreams of studying abroad with confidence and ease.</p>
-                    <p class="mb-4">Education Umbrella – Your trusted partner in international education.</p>
+                    <h6 class="section-title bg-white text-start text-primary pe-3">
+                        <span class="en">About Us</span>
+                        <span class="bn">আমাদের সম্পর্কে</span>
+                    </h6>
+    
+                    <h1 class="mb-4">
+                        <span class="en">Welcome to Education Umbrella</span>
+                        <span class="bn">Education Umbrella-তে আপনাকে স্বাগতম</span>
+                    </h1>
+    
+                    <p style="text-align: justify;" class="mb-4">
+                        <span class="en">At Education Umbrella, we specialize in connecting students with world-class educational opportunities across the globe. Our mission is to simplify the complex process of university admissions by providing personalized guidance, expert support, and comprehensive services.</span>
+                        <span class="bn">Education Umbrella-তে আমরা বিশ্বের বিভিন্ন দেশের মানসম্মত শিক্ষার সুযোগের সঙ্গে শিক্ষার্থীদের সংযুক্ত করতে কাজ করি। ব্যক্তিগত পরামর্শ, বিশেষজ্ঞদের সহায়তা এবং সমন্বিত সেবা প্রদানের মাধ্যমে বিশ্ববিদ্যালয়ে ভর্তির জটিল প্রক্রিয়াকে সহজ করাই আমাদের লক্ষ্য।</span>
+                    </p>
+    
+                    <p style="text-align: justify;" class="mb-4">
+                        <span class="en">With a dedicated team of professionals, we assist students in selecting the best universities, preparing applications, securing visas, and transitioning smoothly to their new academic environment. We are committed to helping students achieve their dreams of studying abroad with confidence and ease.</span>
+                        <span class="bn">আমাদের অভিজ্ঞ ও নিবেদিতপ্রাণ পেশাদার দল শিক্ষার্থীদের উপযুক্ত বিশ্ববিদ্যালয় নির্বাচন, আবেদনপত্র প্রস্তুত, ভিসা প্রাপ্তি এবং নতুন শিক্ষাপ্রতিষ্ঠানের পরিবেশে সহজে মানিয়ে নিতে সহায়তা করে। শিক্ষার্থীরা যেন আত্মবিশ্বাসের সঙ্গে সহজেই বিদেশে পড়াশোনার স্বপ্ন পূরণ করতে পারে, সে লক্ষ্যে আমরা প্রতিশ্রুতিবদ্ধ।</span>
+                    </p>
+    
+                    <p class="mb-4">
+                        <span class="en">Education Umbrella – Your trusted partner in international education.</span>
+                        <span class="bn">Education Umbrella – আন্তর্জাতিক শিক্ষার ক্ষেত্রে আপনার বিশ্বস্ত সহযোগী।</span>
+                    </p>
+    
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Personalized Guidance</p>
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                <span class="en">Personalized Guidance</span>
+                                <span class="bn">ব্যক্তিগত পরামর্শ ও দিকনির্দেশনা</span>
+                            </p>
                         </div>
+    
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Application Support</p>
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                <span class="en">Application Support</span>
+                                <span class="bn">আবেদন প্রক্রিয়ায় সহায়তা</span>
+                            </p>
                         </div>
+    
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Visa and Immigration Help</p>
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                <span class="en">Visa and Immigration Help</span>
+                                <span class="bn">ভিসা ও অভিবাসন সংক্রান্ত সহায়তা</span>
+                            </p>
                         </div>
+    
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Global Partnerships</p>
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                <span class="en">Global Partnerships</span>
+                                <span class="bn">আন্তর্জাতিক অংশীদারত্ব</span>
+                            </p>
                         </div>
+    
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Pre-Departure Assistance</p>
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                <span class="en">Pre-Departure Assistance</span>
+                                <span class="bn">যাত্রার আগে প্রয়োজনীয় সহায়তা</span>
+                            </p>
                         </div>
+    
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Ongoing Support</p>
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                <span class="en">Ongoing Support</span>
+                                <span class="bn">নিয়মিত ও ধারাবাহিক সহায়তা</span>
+                            </p>
                         </div>
                     </div>
-                    <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a> -->
+    
+                    <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">
+                        <span class="en">Read More</span>
+                        <span class="bn">আরও জানুন</span>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -240,50 +387,76 @@
     <div class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
-                <h1 class="mb-5">Admission Categories</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">
+                    <span class="en">Categories</span>
+                    <span class="bn">বিভাগসমূহ</span>
+                </h6>
+    
+                <h1 class="mb-5">
+                    <span class="en">Admission Categories</span>
+                    <span class="bn">ভর্তির বিভাগসমূহ</span>
+                </h1>
             </div>
+    
             <div class="row g-3">
                 <div class="col-lg-7 col-md-6">
                     <div class="row g-3">
+    
                         <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                             <a class="position-relative d-block overflow-hidden" href="master.html">
-                                <img class="img-fluid" src="img/cat-1.jpg" alt="">
+                                <img class="img-fluid" src="img/cat-1.png" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Master Degrees</h5>
+                                    <h5 class="m-0">
+                                        <span class="en">Master's Degrees</span>
+                                        <span class="bn">স্নাতকোত্তর ডিগ্রি</span>
+                                    </h5>
                                     <!-- <small class="text-primary">102 Universities</small> -->
                                 </div>
                             </a>
                         </div>
+    
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                             <a class="position-relative d-block overflow-hidden" href="bachelor.html">
-                                <img class="img-fluid" src="img/cat-2.jpg" alt="">
+                                <img class="img-fluid" src="img/cat-2.png" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Bachelor Degrees</h5>
+                                    <h5 class="m-0">
+                                        <span class="en">Bachelor's Degrees</span>
+                                        <span class="bn">স্নাতক ডিগ্রি</span>
+                                    </h5>
                                     <!-- <small class="text-primary">87 Universities</small> -->
                                 </div>
                             </a>
                         </div>
+    
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                             <a class="position-relative d-block overflow-hidden" href="course.html">
-                                <img class="img-fluid" src="img/cat-3.jpg" alt="">
+                                <img class="img-fluid" src="img/cat-3.png" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Single / Language Course</h5>
+                                    <h5 class="m-0">
+                                        <span class="en">Single / Language Courses</span>
+                                        <span class="bn">একক বিষয় / ভাষা কোর্স</span>
+                                    </h5>
                                     <!-- <small class="text-primary">76 Universities</small> -->
                                 </div>
                             </a>
                         </div>
+    
                     </div>
                 </div>
+    
                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                     <a class="position-relative d-block h-100 overflow-hidden" href="doctoral.html">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
-                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Doctoral Degrees</h5>
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.png" alt="" style="object-fit: cover;">
+                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                            <h5 class="m-0">
+                                <span class="en">Doctoral Degrees</span>
+                                <span class="bn">ডক্টরাল ডিগ্রি (পিএইচডি)</span>
+                            </h5>
                             <!-- <small class="text-primary">93 Universities</small> -->
                         </div>
                     </a>
                 </div>
+    
             </div>
         </div>
     </div>
@@ -294,19 +467,35 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Portugal Universities</h6>
-                <h1 class="mb-5">Top 3 Universities</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">
+                    <span class="en">Portugal Universities</span>
+                    <span class="bn">পর্তুগালের বিশ্ববিদ্যালয়সমূহ</span>
+                </h6>
+                <h1 class="mb-5">
+                    <span class="en">Top 3 Universities</span>
+                    <span class="bn">সেরা ৩টি বিশ্ববিদ্যালয়</span>
+                </h1>
             </div>
+    
             <div class="row g-4 justify-content-center">
+    
+                <!-- University 1 -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="images/universities/1.jpg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="https://www.ulisboa.pt/" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Website</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Apply</a>
+                                <a href="https://www.ulisboa.pt/" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">
+                                    <span class="en">Website</span>
+                                    <span class="bn">ওয়েবসাইট</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">
+                                    <span class="en">Apply</span>
+                                    <span class="bn">আবেদন করুন</span>
+                                </a>
                             </div>
                         </div>
+    
                         <div class="text-center p-4 pb-0">
                             <h3 class="mb-0">Universidade de Lisboa</h3>
                             <div class="mb-3">
@@ -317,28 +506,47 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <!-- <small>(123)</small> -->
                             </div>
-                            <h5 class="mb-4">Bachelor / Masters / PhD</h5>
+                            <h5 class="mb-4">
+                                <span class="en">Bachelor / Master's / PhD</span>
+                                <span class="bn">স্নাতক / স্নাতকোত্তর / পিএইচডি</span>
+                            </h5>
                         </div>
+    
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-star text-primary me-2"></i>
-                                Rank 1
+                            <small class="flex-fill text-center border-end py-2">
+                                <i class="fa fa-star text-primary me-2"></i>
+                                <span class="en">Rank 1</span>
+                                <span class="bn">র‍্যাঙ্ক ১</span>
                             </small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-location-dot text-primary me-2"></i>Lisbon</small>
-                            <!-- <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small> -->
-                            <small class="flex-fill text-center py-2"><i class="fa-solid fa-building-columns text-primary me-2"></i>Public</small>
+                            <small class="flex-fill text-center border-end py-2">
+                                <i class="fa fa-location-dot text-primary me-2"></i>Lisbon
+                            </small>
+                            <small class="flex-fill text-center py-2">
+                                <i class="fa-solid fa-building-columns text-primary me-2"></i>
+                                <span class="en">Public</span>
+                                <span class="bn">সরকারি</span>
+                            </small>
                         </div>
                     </div>
                 </div>
-
+    
+                <!-- University 2 -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="images/universities/2.jpg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="https://www.up.pt/portal/en/" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Website</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Apply</a>
+                                <a href="https://www.up.pt/portal/en/" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">
+                                    <span class="en">Website</span>
+                                    <span class="bn">ওয়েবসাইট</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">
+                                    <span class="en">Apply</span>
+                                    <span class="bn">আবেদন করুন</span>
+                                </a>
                             </div>
                         </div>
+    
                         <div class="text-center p-4 pb-0">
                             <h3 class="mb-0">Universidade do Porto</h3>
                             <div class="mb-3">
@@ -349,28 +557,47 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <!-- <small>(123)</small> -->
                             </div>
-                            <h5 class="mb-4">Bachelor / Masters / PhD</h5>
+                            <h5 class="mb-4">
+                                <span class="en">Bachelor / Master's / PhD</span>
+                                <span class="bn">স্নাতক / স্নাতকোত্তর / পিএইচডি</span>
+                            </h5>
                         </div>
+    
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-star text-primary me-2"></i>
-                                Rank 2
+                            <small class="flex-fill text-center border-end py-2">
+                                <i class="fa fa-star text-primary me-2"></i>
+                                <span class="en">Rank 2</span>
+                                <span class="bn">র‍্যাঙ্ক ২</span>
                             </small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-location-dot text-primary me-2"></i>Porto</small>
-                            <!-- <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small> -->
-                            <small class="flex-fill text-center py-2"><i class="fa-solid fa-building-columns text-primary me-2"></i>Public</small>
+                            <small class="flex-fill text-center border-end py-2">
+                                <i class="fa fa-location-dot text-primary me-2"></i>Porto
+                            </small>
+                            <small class="flex-fill text-center py-2">
+                                <i class="fa-solid fa-building-columns text-primary me-2"></i>
+                                <span class="en">Public</span>
+                                <span class="bn">সরকারি</span>
+                            </small>
                         </div>
                     </div>
                 </div>
-
+    
+                <!-- University 3 -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="images/universities/3.jpg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="https://www.uc.pt/en/" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Website</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Apply</a>
+                                <a href="https://www.uc.pt/en/" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">
+                                    <span class="en">Website</span>
+                                    <span class="bn">ওয়েবসাইট</span>
+                                </a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">
+                                    <span class="en">Apply</span>
+                                    <span class="bn">আবেদন করুন</span>
+                                </a>
                             </div>
                         </div>
+    
                         <div class="text-center p-4 pb-0">
                             <h3 class="mb-0">Universidade de Coimbra</h3>
                             <div class="mb-3">
@@ -381,22 +608,866 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <!-- <small>(123)</small> -->
                             </div>
-                            <h5 class="mb-4">Bachelor / Masters / PhD</h5>
+                            <h5 class="mb-4">
+                                <span class="en">Bachelor / Master's / PhD</span>
+                                <span class="bn">স্নাতক / স্নাতকোত্তর / পিএইচডি</span>
+                            </h5>
                         </div>
+    
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-star text-primary me-2"></i>
-                                Rank 3
+                            <small class="flex-fill text-center border-end py-2">
+                                <i class="fa fa-star text-primary me-2"></i>
+                                <span class="en">Rank 3</span>
+                                <span class="bn">র‍্যাঙ্ক ৩</span>
                             </small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-location-dot text-primary me-2"></i>Coimbra</small>
-                            <!-- <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small> -->
-                            <small class="flex-fill text-center py-2"><i class="fa-solid fa-building-columns text-primary me-2"></i>Public</small>
+                            <small class="flex-fill text-center border-end py-2">
+                                <i class="fa fa-location-dot text-primary me-2"></i>Coimbra
+                            </small>
+                            <small class="flex-fill text-center py-2">
+                                <i class="fa-solid fa-building-columns text-primary me-2"></i>
+                                <span class="en">Public</span>
+                                <span class="bn">সরকারি</span>
+                            </small>
                         </div>
                     </div>
                 </div>
+    
             </div>
         </div>
     </div>
     <!-- Universities End -->
+
+    <!-- Education Umbrella Packages Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+
+            <!-- Section Heading -->
+            <div class="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">
+                    <span class="en">Our Packages</span>
+                    <span class="bn">আমাদের প্যাকেজসমূহ</span>
+                </h6>
+
+                <h1 class="mb-3">
+                    <span class="en">Choose Your Study Abroad Package</span>
+                    <span class="bn">আপনার বিদেশে পড়াশোনার প্যাকেজ বেছে নিন</span>
+                </h1>
+
+                <p class="text-muted mx-auto" style="max-width: 700px;">
+                    <span class="en">
+                        From university admission to visa guidance and arrival support,
+                        choose the package that best suits your needs.
+                    </span>
+                    <span class="bn">
+                        বিশ্ববিদ্যালয়ে ভর্তি থেকে ভিসা সহায়তা ও গন্তব্যে পৌঁছানোর প্রস্তুতি পর্যন্ত,
+                        আপনার প্রয়োজন অনুযায়ী প্যাকেজ বেছে নিন।
+                    </span>
+                </p>
+            </div>
+
+            <!-- Packages -->
+            <div class="row g-4 align-items-stretch">
+
+                <!-- Regular Package -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="package-card package-regular h-100">
+
+                        <div class="package-header">
+                            <div class="package-icon">
+                                <i class="fa fa-graduation-cap"></i>
+                            </div>
+
+                            <h3>
+                                <span class="en">Regular</span>
+                                <span class="bn">রেগুলার</span>
+                            </h3>
+
+                            <p>
+                                <span class="en">Essential University Admission Support</span>
+                                <span class="bn">বিশ্ববিদ্যালয়ে ভর্তির প্রয়োজনীয় সহায়তা</span>
+                            </p>
+
+                            <div class="package-price package-contact-text">
+                                <span class="en">Contact Us</span>
+                                <span class="bn">যোগাযোগ করুন</span>
+                            </div>
+
+                            <small>
+                                <span class="en">Get package details on WhatsApp</span>
+                                <span class="bn">হোয়াটসঅ্যাপে প্যাকেজের বিস্তারিত জানুন</span>
+                            </small>
+                        </div>
+
+                        <div class="package-body">
+                            <h6 class="feature-title">
+                                <span class="en">What's Included</span>
+                                <span class="bn">প্যাকেজে যা থাকছে</span>
+                            </h6>
+
+                            <ul class="package-features">
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Academic profile assessment</span>
+                                    <span class="bn">শিক্ষাগত যোগ্যতা মূল্যায়ন</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">University and programme selection</span>
+                                    <span class="bn">বিশ্ববিদ্যালয় ও প্রোগ্রাম নির্বাচন</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Document preparation guidance</span>
+                                    <span class="bn">প্রয়োজনীয় কাগজপত্র প্রস্তুতিতে সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">University application submission</span>
+                                    <span class="bn">বিশ্ববিদ্যালয়ে আবেদন জমা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Offer / acceptance letter follow-up</span>
+                                    <span class="bn">অফার / ভর্তি গ্রহণপত্রের জন্য ফলো-আপ</span>
+                                </li>
+                            </ul>
+
+                            <a href="https://wa.me/351920757467?text=Hello%2C%20I%20am%20interested%20in%20the%20Regular%20Package."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="package-btn package-btn-outline">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                <span class="en">Contact Us on WhatsApp</span>
+                                <span class="bn">হোয়াটসঅ্যাপে যোগাযোগ করুন</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gold Package -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="package-card package-gold h-100">
+
+                        <div class="package-header">
+                            <div class="package-icon">
+                                <i class="fa fa-award"></i>
+                            </div>
+
+                            <h3>
+                                <span class="en">Gold</span>
+                                <span class="bn">গোল্ড</span>
+                            </h3>
+
+                            <p>
+                                <span class="en">Admission & Visa Application Support</span>
+                                <span class="bn">ভর্তি ও ভিসা আবেদনে সহায়তা</span>
+                            </p>
+
+                            <div class="package-price package-contact-text">
+                                <span class="en">Contact Us</span>
+                                <span class="bn">যোগাযোগ করুন</span>
+                            </div>
+
+                            <small>
+                                <span class="en">Get package details on WhatsApp</span>
+                                <span class="bn">হোয়াটসঅ্যাপে প্যাকেজের বিস্তারিত জানুন</span>
+                            </small>
+                        </div>
+
+                        <div class="package-body">
+                            <h6 class="feature-title">
+                                <span class="en">Everything in Regular, plus</span>
+                                <span class="bn">রেগুলার প্যাকেজের সব সুবিধা, সঙ্গে</span>
+                            </h6>
+
+                            <ul class="package-features">
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Academic profile assessment</span>
+                                    <span class="bn">শিক্ষাগত যোগ্যতা মূল্যায়ন</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">University and programme selection</span>
+                                    <span class="bn">বিশ্ববিদ্যালয় ও প্রোগ্রাম নির্বাচন</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Document preparation and applications</span>
+                                    <span class="bn">কাগজপত্র প্রস্তুতি ও আবেদন</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Offer / acceptance letter follow-up</span>
+                                    <span class="bn">অফার / ভর্তি গ্রহণপত্রের জন্য ফলো-আপ</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Indian double-entry visa assistance, where applicable</span>
+                                    <span class="bn">প্রযোজ্য ক্ষেত্রে ভারতীয় ডাবল-এন্ট্রি ভিসায় সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">VFS Global appointment assistance</span>
+                                    <span class="bn">VFS Global অ্যাপয়েন্টমেন্টে সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Student visa application guidance</span>
+                                    <span class="bn">শিক্ষার্থী ভিসার আবেদন প্রক্রিয়ায় দিকনির্দেশনা</span>
+                                </li>
+                            </ul>
+
+                            <a href="https://wa.me/351920757467?text=Hello%2C%20I%20am%20interested%20in%20the%20Gold%20Package."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="package-btn package-btn-gold">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                <span class="en">Contact Us on WhatsApp</span>
+                                <span class="bn">হোয়াটসঅ্যাপে যোগাযোগ করুন</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platinum Package -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="package-card package-platinum h-100">
+
+                        <div class="package-ribbon">
+                            <span class="en">Premium Support</span>
+                            <span class="bn">প্রিমিয়াম সহায়তা</span>
+                        </div>
+
+                        <div class="package-header">
+                            <div class="package-icon">
+                                <i class="fa fa-gem"></i>
+                            </div>
+
+                            <h3>
+                                <span class="en">Platinum</span>
+                                <span class="bn">প্লাটিনাম</span>
+                            </h3>
+
+                            <p>
+                                <span class="en">Comprehensive Study Abroad Support</span>
+                                <span class="bn">বিদেশে পড়াশোনার জন্য সমন্বিত সহায়তা</span>
+                            </p>
+
+                            <div class="package-price package-contact-text">
+                                <span class="en">Contact Us</span>
+                                <span class="bn">যোগাযোগ করুন</span>
+                            </div>
+
+                            <small>
+                                <span class="en">Get package details on WhatsApp</span>
+                                <span class="bn">হোয়াটসঅ্যাপে প্যাকেজের বিস্তারিত জানুন</span>
+                            </small>
+                        </div>
+
+                        <div class="package-body">
+                            <h6 class="feature-title">
+                                <span class="en">Everything in Gold, plus</span>
+                                <span class="bn">গোল্ড প্যাকেজের সব সুবিধা, সঙ্গে</span>
+                            </h6>
+
+                            <ul class="package-features">
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Comprehensive admission support</span>
+                                    <span class="bn">ভর্তি প্রক্রিয়ায় পূর্ণাঙ্গ সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Indian double-entry visa assistance, where applicable</span>
+                                    <span class="bn">প্রযোজ্য ক্ষেত্রে ভারতীয় ডাবল-এন্ট্রি ভিসায় সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">VFS appointment and visa application guidance</span>
+                                    <span class="bn">VFS অ্যাপয়েন্টমেন্ট ও ভিসা আবেদনে সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Flight ticket arrangement</span>
+                                    <span class="bn">বিমান টিকিটের ব্যবস্থা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">First-year tuition fees, subject to agreed terms</span>
+                                    <span class="bn">চুক্তির শর্ত অনুযায়ী প্রথম বছরের টিউশন ফি</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">One month of accommodation</span>
+                                    <span class="bn">এক মাসের আবাসন</span>
+                                </li>
+                            </ul>
+
+                            <a href="https://wa.me/351920757467?text=Hello%2C%20I%20am%20interested%20in%20the%20Platinum%20Package."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="package-btn package-btn-platinum">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                <span class="en">Contact Us on WhatsApp</span>
+                                <span class="bn">হোয়াটসঅ্যাপে যোগাযোগ করুন</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Package Disclaimer -->
+            <div class="package-note mt-5 wow fadeInUp" data-wow-delay="0.2s">
+                <i class="fa fa-info-circle me-2"></i>
+                <span class="en">
+                    Admission and visa decisions are made by the relevant institutions and authorities.
+                    Package inclusions, third-party fees, and payment terms must be confirmed in a written agreement.
+                </span>
+                <span class="bn">
+                    বিশ্ববিদ্যালয়ে ভর্তি ও ভিসার সিদ্ধান্ত সংশ্লিষ্ট প্রতিষ্ঠান ও কর্তৃপক্ষ গ্রহণ করে।
+                    প্যাকেজের অন্তর্ভুক্ত সুবিধা, তৃতীয় পক্ষের ফি এবং অর্থ পরিশোধের শর্ত লিখিত চুক্তিতে নিশ্চিত করতে হবে।
+                </span>
+            </div>
+
+        </div>
+    </div>
+    <!-- Education Umbrella Packages End -->
+
+    <!-- Education Umbrella Packages Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+
+            <div class="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">
+                    <span class="en">Our Packages</span>
+                    <span class="bn">আমাদের প্যাকেজসমূহ</span>
+                </h6>
+
+                <h1 class="mb-3">
+                    <span class="en">Choose Your Study Abroad Package</span>
+                    <span class="bn">আপনার বিদেশে পড়াশোনার প্যাকেজ বেছে নিন</span>
+                </h1>
+
+                <p class="text-muted mx-auto" style="max-width: 700px;">
+                    <span class="en">
+                        From university admission to visa guidance and arrival support,
+                        choose the package that best suits your needs.
+                    </span>
+                    <span class="bn">
+                        বিশ্ববিদ্যালয়ে ভর্তি থেকে ভিসা সহায়তা ও গন্তব্যে পৌঁছানোর প্রস্তুতি পর্যন্ত,
+                        আপনার প্রয়োজন অনুযায়ী প্যাকেজ বেছে নিন।
+                    </span>
+                </p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="package-card package-regular h-100">
+
+                        <div class="package-header">
+                            <div class="package-icon">
+                                <i class="fa fa-graduation-cap"></i>
+                            </div>
+
+                            <h3>
+                                <span class="en">Regular</span>
+                                <span class="bn">রেগুলার</span>
+                            </h3>
+
+                            <p>
+                                <span class="en">Essential University Admission Support</span>
+                                <span class="bn">বিশ্ববিদ্যালয়ে ভর্তির প্রয়োজনীয় সহায়তা</span>
+                            </p>
+
+                            <div class="package-price">
+                                <span class="currency">৳</span>5,00,000
+                            </div>
+
+                            <small>
+                                <span class="en">Regular Package</span>
+                                <span class="bn">রেগুলার প্যাকেজ</span>
+                            </small>
+                        </div>
+
+                        <div class="package-body">
+                            <h6 class="feature-title">
+                                <span class="en">What's Included</span>
+                                <span class="bn">প্যাকেজে যা থাকছে</span>
+                            </h6>
+
+                            <ul class="package-features">
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Academic profile assessment</span>
+                                    <span class="bn">শিক্ষাগত যোগ্যতা মূল্যায়ন</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">University and programme selection</span>
+                                    <span class="bn">বিশ্ববিদ্যালয় ও প্রোগ্রাম নির্বাচন</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Document preparation guidance</span>
+                                    <span class="bn">প্রয়োজনীয় কাগজপত্র প্রস্তুতিতে সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">University application submission</span>
+                                    <span class="bn">বিশ্ববিদ্যালয়ে আবেদন জমা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Offer / acceptance letter follow-up</span>
+                                    <span class="bn">অফার / ভর্তি গ্রহণপত্রের জন্য ফলো-আপ</span>
+                                </li>
+                            </ul>
+
+                            <a href="contact.html?package=regular" class="package-btn package-btn-outline">
+                                <span class="en">Choose Regular</span>
+                                <span class="bn">রেগুলার প্যাকেজ বেছে নিন</span>
+                                <i class="fa fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="package-card package-gold h-100">
+
+                        <div class="package-header">
+                            <div class="package-icon">
+                                <i class="fa fa-award"></i>
+                            </div>
+
+                            <h3>
+                                <span class="en">Gold</span>
+                                <span class="bn">গোল্ড</span>
+                            </h3>
+
+                            <p>
+                                <span class="en">Admission & Visa Application Support</span>
+                                <span class="bn">ভর্তি ও ভিসা আবেদনে সহায়তা</span>
+                            </p>
+
+                            <div class="package-price">
+                                <span class="currency">৳</span>10,00,000
+                            </div>
+
+                            <small>
+                                <span class="en">Gold Package</span>
+                                <span class="bn">গোল্ড প্যাকেজ</span>
+                            </small>
+                        </div>
+
+                        <div class="package-body">
+                            <h6 class="feature-title">
+                                <span class="en">Everything in Regular, plus</span>
+                                <span class="bn">রেগুলার প্যাকেজের সব সুবিধা, সঙ্গে</span>
+                            </h6>
+
+                            <ul class="package-features">
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Academic profile assessment</span>
+                                    <span class="bn">শিক্ষাগত যোগ্যতা মূল্যায়ন</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">University and programme selection</span>
+                                    <span class="bn">বিশ্ববিদ্যালয় ও প্রোগ্রাম নির্বাচন</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Document preparation and applications</span>
+                                    <span class="bn">কাগজপত্র প্রস্তুতি ও আবেদন</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Offer / acceptance letter follow-up</span>
+                                    <span class="bn">অফার / ভর্তি গ্রহণপত্রের জন্য ফলো-আপ</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Indian double-entry visa assistance, where applicable</span>
+                                    <span class="bn">প্রযোজ্য ক্ষেত্রে ভারতীয় ডাবল-এন্ট্রি ভিসায় সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">VFS Global appointment assistance</span>
+                                    <span class="bn">VFS Global অ্যাপয়েন্টমেন্টে সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Student visa application guidance</span>
+                                    <span class="bn">শিক্ষার্থী ভিসার আবেদন প্রক্রিয়ায় দিকনির্দেশনা</span>
+                                </li>
+                            </ul>
+
+                            <a href="contact.html?package=gold" class="package-btn package-btn-gold">
+                                <span class="en">Choose Gold</span>
+                                <span class="bn">গোল্ড প্যাকেজ বেছে নিন</span>
+                                <i class="fa fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="package-card package-platinum h-100">
+
+                        <div class="package-ribbon">
+                            <span class="en">Premium Support</span>
+                            <span class="bn">প্রিমিয়াম সহায়তা</span>
+                        </div>
+
+                        <div class="package-header">
+                            <div class="package-icon">
+                                <i class="fa fa-gem"></i>
+                            </div>
+
+                            <h3>
+                                <span class="en">Platinum</span>
+                                <span class="bn">প্লাটিনাম</span>
+                            </h3>
+
+                            <p>
+                                <span class="en">Comprehensive Study Abroad Support</span>
+                                <span class="bn">বিদেশে পড়াশোনার জন্য সমন্বিত সহায়তা</span>
+                            </p>
+
+                            <div class="package-price">
+                                <span class="currency">৳</span>15,00,000
+                            </div>
+
+                            <small>
+                                <span class="en">Platinum Package</span>
+                                <span class="bn">প্লাটিনাম প্যাকেজ</span>
+                            </small>
+                        </div>
+
+                        <div class="package-body">
+                            <h6 class="feature-title">
+                                <span class="en">Everything in Gold, plus</span>
+                                <span class="bn">গোল্ড প্যাকেজের সব সুবিধা, সঙ্গে</span>
+                            </h6>
+
+                            <ul class="package-features">
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Comprehensive admission support</span>
+                                    <span class="bn">ভর্তি প্রক্রিয়ায় পূর্ণাঙ্গ সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Indian double-entry visa assistance, where applicable</span>
+                                    <span class="bn">প্রযোজ্য ক্ষেত্রে ভারতীয় ডাবল-এন্ট্রি ভিসায় সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">VFS appointment and visa application guidance</span>
+                                    <span class="bn">VFS অ্যাপয়েন্টমেন্ট ও ভিসা আবেদনে সহায়তা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">Flight ticket arrangement</span>
+                                    <span class="bn">বিমান টিকিটের ব্যবস্থা</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">First-year tuition fees, subject to agreed terms</span>
+                                    <span class="bn">চুক্তির শর্ত অনুযায়ী প্রথম বছরের টিউশন ফি</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-circle"></i>
+                                    <span class="en">One month of accommodation</span>
+                                    <span class="bn">এক মাসের আবাসন</span>
+                                </li>
+                            </ul>
+
+                            <a href="contact.html?package=platinum" class="package-btn package-btn-platinum">
+                                <span class="en">Choose Platinum</span>
+                                <span class="bn">প্লাটিনাম প্যাকেজ বেছে নিন</span>
+                                <i class="fa fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="package-note mt-5 wow fadeInUp" data-wow-delay="0.2s">
+                <i class="fa fa-info-circle me-2"></i>
+                <span class="en">
+                    Admission and visa decisions are made by the relevant institutions and authorities.
+                    Package inclusions, third-party fees, and payment terms must be confirmed in a written agreement.
+                </span>
+                <span class="bn">
+                    বিশ্ববিদ্যালয়ে ভর্তি ও ভিসার সিদ্ধান্ত সংশ্লিষ্ট প্রতিষ্ঠান ও কর্তৃপক্ষ গ্রহণ করে।
+                    প্যাকেজের অন্তর্ভুক্ত সুবিধা, তৃতীয় পক্ষের ফি এবং অর্থ পরিশোধের শর্ত লিখিত চুক্তিতে নিশ্চিত করতে হবে।
+                </span>
+            </div>
+
+        </div>
+    </div> -->
+    <!-- Education Umbrella Packages End -->
+
+    
+    <!-- Bangladesh Partnership Section Start -->
+    <section class="pmis-partnership-section">
+
+        <!-- Section Heading -->
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="pmis-section-heading text-center wow fadeInUp"
+                data-wow-delay="0.1s">
+
+                <span class="pmis-eyebrow">
+                    <span class="en">OUR INTERNATIONAL PARTNERSHIPS</span>
+                    <span class="bn">আমাদের আন্তর্জাতিক অংশীদারিত্ব</span>
+                </span>
+
+                <h2>
+                    <span class="en">Connecting Bangladesh with Global Education</span>
+                    <span class="bn">বাংলাদেশের শিক্ষার্থীদের সঙ্গে বৈশ্বিক শিক্ষার সংযোগ</span>
+                </h2>
+
+                <p>
+                    <span class="en">
+                        Building educational connections through institutional cooperation,
+                        student guidance, and international study opportunities.
+                    </span>
+                    <span class="bn">
+                        প্রাতিষ্ঠানিক সহযোগিতা, শিক্ষার্থীদের দিকনির্দেশনা এবং
+                        আন্তর্জাতিক উচ্চশিক্ষার সুযোগের মাধ্যমে শিক্ষার সংযোগ গড়ে তোলা।
+                    </span>
+                </p>
+            </div>
+
+            <!-- Partnership Main Content -->
+            <div class="pmis-main-panel wow fadeInUp" data-wow-delay="0.2s">
+                <div class="row g-0">
+
+                    <!-- Left: Partnership Overview -->
+                    <div class="col-lg-7">
+                        <div class="pmis-overview">
+
+                            <div class="pmis-status">
+                                <i class="fa fa-handshake me-2"></i>
+                                <span class="en">MoU-Based Partnership</span>
+                                <span class="bn">সমঝোতা স্মারকভিত্তিক অংশীদারিত্ব</span>
+                            </div>
+
+                            <h3>
+                                <span class="en">A Partnership Built on Cooperation</span>
+                                <span class="bn">পারস্পরিক সহযোগিতার ভিত্তিতে অংশীদারিত্ব</span>
+                            </h3>
+
+                            <p class="pmis-intro">
+                                <span class="en">
+                                    Education Umbrella is pleased to have a Memorandum
+                                    of Understanding (MoU) with the Center for Project
+                                    Management and Information Systems (PMIS), Bangladesh.
+                                    This partnership provides a framework for cooperation
+                                    in education-related initiatives and support for
+                                    students exploring international study opportunities.
+                                </span>
+                                <span class="bn">
+                                    Education Umbrella বাংলাদেশের Center for Project
+                                    Management and Information Systems (PMIS)-এর সঙ্গে
+                                    একটি সমঝোতা স্মারক (MoU) স্বাক্ষরের মাধ্যমে
+                                    অংশীদারিত্ব গড়ে তুলতে পেরে আনন্দিত। এই অংশীদারিত্ব
+                                    শিক্ষা-সম্পর্কিত উদ্যোগ এবং আন্তর্জাতিক উচ্চশিক্ষার
+                                    সুযোগ অন্বেষণকারী শিক্ষার্থীদের সহায়তায় সহযোগিতার
+                                    একটি কাঠামো তৈরি করে।
+                                </span>
+                            </p>
+
+                            <!-- Partnership Highlights -->
+                            <div class="pmis-highlights">
+
+                                <div class="pmis-highlight">
+                                    <div class="pmis-highlight-icon">
+                                        <i class="fa fa-graduation-cap"></i>
+                                    </div>
+                                    <div>
+                                        <h5>
+                                            <span class="en">Educational Opportunities</span>
+                                            <span class="bn">শিক্ষার সুযোগ</span>
+                                        </h5>
+                                        <p>
+                                            <span class="en">
+                                                Helping students explore suitable
+                                                international study pathways.
+                                            </span>
+                                            <span class="bn">
+                                                শিক্ষার্থীদের উপযুক্ত আন্তর্জাতিক
+                                                উচ্চশিক্ষার পথ খুঁজে পেতে সহায়তা।
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="pmis-highlight">
+                                    <div class="pmis-highlight-icon">
+                                        <i class="fa fa-users"></i>
+                                    </div>
+                                    <div>
+                                        <h5>
+                                            <span class="en">Student Guidance</span>
+                                            <span class="bn">শিক্ষার্থীদের দিকনির্দেশনা</span>
+                                        </h5>
+                                        <p>
+                                            <span class="en">
+                                                Guidance on admissions, documentation,
+                                                and application preparation.
+                                            </span>
+                                            <span class="bn">
+                                                ভর্তি, প্রয়োজনীয় কাগজপত্র এবং
+                                                আবেদন প্রস্তুতিতে দিকনির্দেশনা।
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="pmis-highlight">
+                                    <div class="pmis-highlight-icon">
+                                        <i class="fa fa-globe"></i>
+                                    </div>
+                                    <div>
+                                        <h5>
+                                            <span class="en">International Cooperation</span>
+                                            <span class="bn">আন্তর্জাতিক সহযোগিতা</span>
+                                        </h5>
+                                        <p>
+                                            <span class="en">
+                                                Encouraging cooperation in international
+                                                education initiatives, subject to the
+                                                agreed scope of the partnership.
+                                            </span>
+                                            <span class="bn">
+                                                অংশীদারিত্বের সম্মত পরিধি অনুযায়ী
+                                                আন্তর্জাতিক শিক্ষা-সম্পর্কিত উদ্যোগে
+                                                সহযোগিতাকে উৎসাহিত করা।
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="pmis-note">
+                                <i class="fa fa-info-circle me-2"></i>
+                                <span class="en">
+                                    Activities and services are subject to the terms
+                                    and scope of the MoU.
+                                </span>
+                                <span class="bn">
+                                    কার্যক্রম ও সেবাসমূহ MoU-এর শর্ত ও সম্মত পরিধির
+                                    ওপর নির্ভরশীল।
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right: Partner Profile -->
+                    <div class="col-lg-5">
+                        <div class="pmis-partner-panel">
+
+                            <div class="pmis-partner-top">
+                                <div class="pmis-partner-icon">
+                                    <i class="fa fa-building"></i>
+                                </div>
+
+                                <span class="pmis-partner-tag">
+                                    <span class="en">BANGLADESH PARTNER</span>
+                                    <span class="bn">বাংলাদেশের পার্টনার</span>
+                                </span>
+
+                                <h3>
+                                    Center for Project Management and
+                                    Information Systems (PMIS)
+                                </h3>
+
+                                <p class="pmis-partner-description">
+                                    <span class="en">
+                                        Our partner organization in Bangladesh
+                                    </span>
+                                    <span class="bn">
+                                        বাংলাদেশে আমাদের অংশীদার প্রতিষ্ঠান
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="pmis-address-box">
+                                <div class="pmis-address-heading">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <h5>
+                                        <span class="en">Office Address</span>
+                                        <span class="bn">অফিসের ঠিকানা</span>
+                                    </h5>
+                                </div>
+
+                                <p>
+                                    9/1-4 Free School Street,<br>
+                                    Box Culvert Road, Kathal Bagan,<br>
+                                    Dhaka - 1205, Bangladesh.
+                                </p>
+
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&amp;query=9%2F1-4%20Free%20School%20Street%2C%20Box%20Culvert%20Road%2C%20Kathal%20Bagan%2C%20Dhaka%201205%2C%20Bangladesh"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="pmis-map-button"
+                                >
+                                    <i class="fa fa-map-marked-alt me-2"></i>
+                                    <span class="en">Find Us on Google Maps</span>
+                                    <span class="bn">গুগল ম্যাপে ঠিকানা দেখুন</span>
+                                    <i class="fa fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+
+                            <div class="pmis-partner-footer">
+                                <i class="fa fa-handshake me-2"></i>
+                                <span class="en">
+                                    Working together for educational opportunities
+                                </span>
+                                <span class="bn">
+                                    শিক্ষার সুযোগ সম্প্রসারণে একসঙ্গে কাজ করছি
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Closing Message -->
+            <div class="pmis-bottom-message text-center wow fadeInUp"
+                data-wow-delay="0.3s">
+                <h4>
+                    <span class="en">Better Connections. More Educational Opportunities.</span>
+                    <span class="bn">আরও শক্তিশালী সংযোগ। শিক্ষার আরও সুযোগ।</span>
+                </h4>
+                <p>
+                    <span class="en">
+                        Education Umbrella is committed to helping students make
+                        informed decisions about their international education journey.
+                    </span>
+                    <span class="bn">
+                        আন্তর্জাতিক উচ্চশিক্ষার যাত্রায় শিক্ষার্থীদের সচেতন ও
+                        সঠিক সিদ্ধান্ত নিতে সহায়তা করতে Education Umbrella প্রতিশ্রুতিবদ্ধ।
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Bangladesh Partnership Section End -->
 
 
     <!-- Team Start -->
@@ -535,55 +1606,156 @@
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
+    
+                <!-- Quick Links -->
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="/about.html">About Us</a>
-                    <a class="btn btn-link" href="/contact.html">Contact Us</a>
-                    <!-- <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a> -->
+                    <h4 class="text-white mb-3">
+                        <span class="en">Quick Links</span>
+                        <span class="bn">দ্রুত লিংক</span>
+                    </h4>
+    
+                    <a class="btn btn-link" href="/about.html">
+                        <span class="en">About Us</span>
+                        <span class="bn">আমাদের সম্পর্কে</span>
+                    </a>
+    
+                    <a class="btn btn-link" href="/contact.html">
+                        <span class="en">Contact Us</span>
+                        <span class="bn">যোগাযোগ করুন</span>
+                    </a>
+    
+                    <!--
+                    <a class="btn btn-link" href="">
+                        <span class="en">Privacy Policy</span>
+                        <span class="bn">গোপনীয়তা নীতি</span>
+                    </a>
+                    <a class="btn btn-link" href="">
+                        <span class="en">Terms & Conditions</span>
+                        <span class="bn">শর্তাবলি</span>
+                    </a>
+                    <a class="btn btn-link" href="">
+                        <span class="en">FAQs & Help</span>
+                        <span class="bn">সাধারণ জিজ্ঞাসা ও সহায়তা</span>
+                    </a>
+                    -->
                 </div>
+    
+                <!-- Contact -->
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Largo das Alterações 17, Évora, PT</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+351 920 757467</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>educationumbrellapt@gmail.com</p>
+                    <h4 class="text-white mb-3">
+                        <span class="en">Contact</span>
+                        <span class="bn">যোগাযোগ</span>
+                    </h4>
+    
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-3"></i>
+                        Largo das Alterações 17, Évora, PT
+                    </p>
+    
+                    <p class="mb-2">
+                        <i class="fa fa-phone-alt me-3"></i>
+                        +351 920 757467
+                    </p>
+    
+                    <p class="mb-2">
+                        <i class="fa fa-envelope me-3"></i>
+                        educationumbrellapt@gmail.com
+                    </p>
+    
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-social" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-social" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-social" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
+    
+                <!-- Services -->
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Services</h4>
-                    <a class="btn btn-link" href="#">University Selection</a>
-                    <a class="btn btn-link" href="#">Application Support</a>
-                    <a class="btn btn-link" href="#">Visa Assistance</a>
-                    <a class="btn btn-link" href="#">Pre/Post-Arrival Support</a>
-                    <a class="btn btn-link" href="#">FAQs & Help</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Stay Connected</h4>
-                    <p>
-                        Have questions about university admissions, scholarships, or studying abroad?
-                        Get in touch with our team.
-                    </p>
-                
-                    <a href="mailto:educationumbrellapt@gmail.com" class="btn btn-primary fw-bold px-4 py-2">
-                        <i class="fa fa-envelope me-2"></i>
-                        Email Us
+                    <h4 class="text-white mb-3">
+                        <span class="en">Services</span>
+                        <span class="bn">আমাদের সেবাসমূহ</span>
+                    </h4>
+    
+                    <a class="btn btn-link" href="#">
+                        <span class="en">University Selection</span>
+                        <span class="bn">বিশ্ববিদ্যালয় নির্বাচন</span>
+                    </a>
+    
+                    <a class="btn btn-link" href="#">
+                        <span class="en">Application Support</span>
+                        <span class="bn">আবেদন প্রক্রিয়ায় সহায়তা</span>
+                    </a>
+    
+                    <a class="btn btn-link" href="#">
+                        <span class="en">Visa Assistance</span>
+                        <span class="bn">ভিসা সংক্রান্ত সহায়তা</span>
+                    </a>
+    
+                    <a class="btn btn-link" href="#">
+                        <span class="en">Pre/Post-Arrival Support</span>
+                        <span class="bn">আগমনের আগে ও পরে সহায়তা</span>
+                    </a>
+    
+                    <a class="btn btn-link" href="#">
+                        <span class="en">FAQs & Help</span>
+                        <span class="bn">সাধারণ জিজ্ঞাসা ও সহায়তা</span>
                     </a>
                 </div>
+    
+                <!-- Stay Connected -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">
+                        <span class="en">Stay Connected</span>
+                        <span class="bn">আমাদের সঙ্গে যোগাযোগ রাখুন</span>
+                    </h4>
+    
+                    <p>
+                        <span class="en">
+                            Have questions about university admissions, scholarships, or studying abroad?
+                            Get in touch with our team.
+                        </span>
+                        <span class="bn">
+                            বিশ্ববিদ্যালয়ে ভর্তি, বৃত্তি অথবা বিদেশে পড়াশোনা সম্পর্কে কোনো প্রশ্ন আছে?
+                            আমাদের দলের সঙ্গে যোগাযোগ করুন।
+                        </span>
+                    </p>
+    
+                    <a href="mailto:educationumbrellapt@gmail.com" class="btn btn-primary fw-bold px-4 py-2">
+                        <i class="fa fa-envelope me-2"></i>
+                        <span class="en">Email Us</span>
+                        <span class="bn">ইমেইল করুন</span>
+                    </a>
+                </div>
+    
             </div>
         </div>
+    
+        <!-- Copyright -->
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-12 text-center">
-                        © 2026 <strong>Education Umbrella</strong>. All Rights Reserved.
+                        <span class="en">
+                            © 2026 <strong>Education Umbrella</strong>. All Rights Reserved.
+                        </span>
+                        <span class="bn">
+                            © ২০২৬ <strong>Education Umbrella</strong>। সর্বস্বত্ব সংরক্ষিত।
+                        </span>
+    
                         <br><br>
-                        Designed &amp; Developed by <strong style="color: #0086fd;">RedonDev IT</strong>.
+    
+                        <span class="en">Designed &amp; Developed by</span>
+                        <span class="bn">পরিকল্পনা ও উন্নয়নে</span>
+                        <strong style="color: #0086fd;">RedonDev IT</strong>.
                     </div>
                 </div>
             </div>

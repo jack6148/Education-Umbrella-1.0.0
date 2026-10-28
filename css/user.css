@@ -1,0 +1,628 @@
+#btnBangla,
+#btnEnglish {
+    display: none !important;
+}
+
+#btnBangla.active-language,
+#btnEnglish.active-language {
+    display: inline-block !important;
+}
+
+/* Education Umbrella Pricing Packages */
+
+.package-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(18, 38, 63, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(18, 38, 63, 0.13);
+}
+
+.package-header {
+    padding: 35px 22px 28px;
+    text-align: center;
+    background: #f5f8fc;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.package-header h3 {
+    margin: 15px 0 8px;
+    font-weight: 700;
+    color: #172b4d;
+}
+
+.package-header p {
+    min-height: 45px;
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.package-icon {
+    display: flex;
+    width: 65px;
+    height: 65px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 18px;
+    background: #e8f1ff;
+    color: #06bbcc;
+    font-size: 28px;
+}
+
+.package-price {
+    color: #172b4d;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-top: 15px;
+}
+
+.package-price .currency {
+    font-size: 22px;
+    margin-right: 3px;
+}
+
+.package-header small {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.package-body {
+    padding: 28px 24px;
+}
+
+.feature-title {
+    color: #172b4d;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+}
+
+.package-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 16px;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.package-features li i {
+    color: #06bbcc;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.package-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 12px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.package-btn-outline {
+    color: #06a9b8;
+    border: 2px solid #06bbcc;
+    background: #ffffff;
+}
+
+.package-btn-outline:hover {
+    color: #ffffff;
+    background: #06bbcc;
+}
+
+.package-btn-gold {
+    color: #ffffff;
+    background: #c18a25;
+    border: 2px solid #c18a25;
+}
+
+.package-btn-gold:hover {
+    color: #ffffff;
+    background: #a97418;
+    border-color: #a97418;
+}
+
+.package-btn-platinum {
+    color: #ffffff;
+    background: #172b4d;
+    border: 2px solid #172b4d;
+}
+
+.package-btn-platinum:hover {
+    color: #ffffff;
+    background: #243f69;
+    border-color: #243f69;
+}
+
+/* Gold package styling */
+.package-gold {
+    border-top: 4px solid #c18a25;
+}
+
+.package-gold .package-icon {
+    color: #b78323;
+    background: #fff2d8;
+}
+
+/* Platinum package styling */
+.package-platinum {
+    border: 2px solid #06bbcc;
+}
+
+.package-platinum .package-header {
+    background: #eefbfc;
+}
+
+.package-platinum .package-icon {
+    color: #ffffff;
+    background: #172b4d;
+}
+
+.package-platinum .package-features li i {
+    color: #06a9b8;
+}
+
+.package-ribbon {
+    position: absolute;
+    top: 15px;
+    right: -38px;
+    z-index: 2;
+    width: 145px;
+    padding: 7px 0;
+    text-align: center;
+    color: #ffffff;
+    background: #06a9b8;
+    font-size: 11px;
+    font-weight: 700;
+    transform: rotate(45deg);
+}
+
+/* Terms and conditions note */
+.package-note {
+    padding: 18px 22px;
+    border-left: 4px solid #06bbcc;
+    border-radius: 8px;
+    background: #f5f8fc;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Responsive layout */
+@media (max-width: 991px) {
+    .package-card {
+        height: auto !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .package-header {
+        padding: 28px 18px 22px;
+    }
+
+    .package-body {
+        padding: 24px 20px;
+    }
+
+    .package-price {
+        font-size: 28px;
+    }
+}
+
+/* Package Contact Text */
+.package-contact-text {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: #06a9b8;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* WhatsApp Icon */
+.package-btn .fa-whatsapp {
+    font-size: 18px;
+}
+
+/* Keep package buttons consistent */
+.package-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* partner */
+
+
+/* ==========================================
+   PMIS BANGLADESH PARTNERSHIP SECTION
+========================================== */
+
+.pmis-partnership-section {
+    width: 100%;
+    padding: 85px 0 75px;
+    background: #f4f9fb;
+    overflow: hidden;
+}
+
+.pmis-section-heading {
+    max-width: 950px;
+    margin: 0 auto 45px;
+}
+
+.pmis-eyebrow {
+    display: inline-block;
+    color: #06a9b8;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.pmis-section-heading h2 {
+    color: #181d38;
+    font-size: clamp(28px, 3.2vw, 42px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.pmis-section-heading p {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+/* Main Panel */
+
+.pmis-main-panel {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e5edf1;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(24, 29, 56, 0.06);
+}
+
+/* Left Content */
+
+.pmis-overview {
+    padding: 55px 55px 45px;
+}
+
+.pmis-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 17px;
+    margin-bottom: 24px;
+    background: #e7f7f8;
+    border-radius: 30px;
+    color: #078b98;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.pmis-overview h3 {
+    color: #181d38;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.pmis-intro {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.95;
+    margin-bottom: 32px;
+}
+
+/* Highlight Items */
+
+.pmis-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.pmis-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.pmis-highlight-icon {
+    display: flex;
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #e8f7f8;
+    color: #06a9b8;
+    font-size: 21px;
+}
+
+.pmis-highlight h5 {
+    color: #181d38;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 2px 0 7px;
+}
+
+.pmis-highlight p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.pmis-note {
+    margin-top: 30px;
+    padding: 15px 18px;
+    border-left: 4px solid #06a9b8;
+    background: #f5fafb;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Right Partner Panel */
+
+.pmis-partner-panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #ffffff;
+    border-left: 1px solid #e8eef2;
+}
+
+.pmis-partner-top {
+    padding: 55px 38px 35px;
+    text-align: center;
+    background: linear-gradient(145deg, #e8f8f9 0%, #f7fbfc 100%);
+}
+
+.pmis-partner-icon {
+    display: flex;
+    width: 88px;
+    height: 88px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 22px;
+    border-radius: 22px;
+    background: #06a9b8;
+    color: #ffffff;
+    font-size: 36px;
+    box-shadow: 0 8px 20px rgba(6, 169, 184, 0.20);
+}
+
+.pmis-partner-tag {
+    display: inline-block;
+    color: #078b98;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 17px;
+}
+
+.pmis-partner-top h3 {
+    color: #181d38;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.55;
+    margin-bottom: 12px;
+}
+
+.pmis-partner-description {
+    color: #667085;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* Address Box */
+
+.pmis-address-box {
+    padding: 35px 38px;
+    flex-grow: 1;
+}
+
+.pmis-address-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 15px;
+}
+
+.pmis-address-heading i {
+    color: #06a9b8;
+    font-size: 23px;
+}
+
+.pmis-address-heading h5 {
+    color: #181d38;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.pmis-address-box > p {
+    padding-left: 36px;
+    color: #667085;
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.pmis-map-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    width: 100%;
+    padding: 15px 18px;
+    border-radius: 8px;
+    background: #06a9b8;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.pmis-map-button:hover {
+    background: #078b98;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.pmis-partner-footer {
+    padding: 19px 25px;
+    background: #181d38;
+    color: #ffffff;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Closing Message */
+
+.pmis-bottom-message {
+    max-width: 900px;
+    margin: 45px auto 0;
+}
+
+.pmis-bottom-message h4 {
+    color: #181d38;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.pmis-bottom-message p {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 991px) {
+    .pmis-partnership-section {
+        padding: 65px 0;
+    }
+
+    .pmis-overview {
+        padding: 40px 32px;
+    }
+
+    .pmis-partner-panel {
+        border-left: 0;
+        border-top: 1px solid #e8eef2;
+    }
+
+    .pmis-partner-top {
+        padding: 40px 30px 30px;
+    }
+
+    .pmis-address-box {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pmis-partnership-section {
+        padding: 50px 0;
+    }
+
+    .pmis-section-heading {
+        margin-bottom: 30px;
+    }
+
+    .pmis-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .pmis-section-heading p {
+        font-size: 14px;
+    }
+
+    .pmis-overview {
+        padding: 30px 22px;
+    }
+
+    .pmis-overview h3 {
+        font-size: 24px;
+    }
+
+    .pmis-intro {
+        font-size: 14px;
+    }
+
+    .pmis-highlight {
+        gap: 13px;
+    }
+
+    .pmis-highlight-icon {
+        flex-basis: 44px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .pmis-highlight h5 {
+        font-size: 15px;
+    }
+
+    .pmis-highlight p {
+        font-size: 13px;
+    }
+
+    .pmis-partner-top {
+        padding: 35px 22px 28px;
+    }
+
+    .pmis-partner-top h3 {
+        font-size: 21px;
+    }
+
+    .pmis-address-box {
+        padding: 27px 22px;
+    }
+
+    .pmis-map-button {
+        font-size: 12px;
+        padding: 14px 10px;
+    }
+
+    .pmis-bottom-message h4 {
+        font-size: 20px;
+    }
+}
